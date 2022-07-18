@@ -1,0 +1,25 @@
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  background-color: rgba(138, 247, 210, 0.678);
+}
+
+.dataTables_wrapper .dataTable tfoot th,
+.dataTables_wrapper .dataTable thead th {
+  font-weight: 500;
+  color: #049f82;
+}
+
+.center {
+  text-align: center;
+}
+
+.caixa-alta {
+  text-transform: uppercase;
+}
+
+.acao {
+  width: 250px;
+  text-align: center;
+}
