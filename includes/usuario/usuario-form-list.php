@@ -4,36 +4,36 @@ $list = '';
 
 if (isset($_GET['status'])) {
 
-   switch ($_GET['status']) {
-      case 'success':
-         $icon  = 'success';
-         $title = 'Parabéns';
-         $text = 'Cadastro realizado com Sucesso !!!';
-         break;
+    switch ($_GET['status']) {
+        case 'success':
+            $icon  = 'success';
+            $title = 'Parabéns';
+            $text = 'Cadastro realizado com Sucesso !!!';
+            break;
 
-      case 'del':
-         $icon  = 'error';
-         $title = 'Parabéns';
-         $text = 'Esse usuário foi excluido !!!';
-         break;
+        case 'del':
+            $icon  = 'error';
+            $title = 'Parabéns';
+            $text = 'Esse usuário foi excluido !!!';
+            break;
 
-      case 'edit':
-         $icon  = 'warning';
-         $title = 'Parabéns';
-         $text = 'Cadastro atualizado com sucesso !!!';
-         break;
+        case 'edit':
+            $icon  = 'warning';
+            $title = 'Parabéns';
+            $text = 'Cadastro atualizado com sucesso !!!';
+            break;
 
 
-      default:
-         $icon  = 'error';
-         $title = 'Opss !!!';
-         $text = 'Algo deu errado entre em contato com admin !!!';
-         break;
-   }
+        default:
+            $icon  = 'error';
+            $title = 'Opss !!!';
+            $text = 'Algo deu errado entre em contato com admin !!!';
+            break;
+    }
 
-   function alerta($icon, $title, $text)
-   {
-      echo "<script type='text/javascript'>
+    function alerta($icon, $title, $text)
+    {
+        echo "<script type='text/javascript'>
       Swal.fire({
         type:'type',  
         icon: '$icon',
@@ -42,16 +42,16 @@ if (isset($_GET['status'])) {
        
       }) 
       </script>";
-   }
+    }
 
-   alerta($icon, $title, $text);
+    alerta($icon, $title, $text);
 }
 
 $resultados = '';
 
 foreach ($listar as $item) {
 
-   $resultados .= '<tr>
+    $resultados .= '<tr>
    <td>' . $item->id . '</td>
    <td>' . $item->nome . '</td>
    <td>' . $item->email . '</td>
@@ -107,7 +107,7 @@ foreach ($listar as $item) {
         <table class="table table-separate table-hover " id="datatable">
             <thead>
                 <tr>
-                    <th> CÓDIGO </th>
+                    <th class="car"> CÓDIGO </th>
                     <th> NOME </th>
                     <th> EMAIL </th>
                     <th> CARGO </th>
@@ -157,10 +157,10 @@ foreach ($listar as $item) {
                                     <option value=""> Selecione um usuario </option>
                                     <?php
 
-                           foreach ($cargos as $item) {
-                              echo '<option value="' . $item->id . '">' . $item->descricao . '</option>';
-                           }
-                           ?>
+                                    foreach ($cargos as $item) {
+                                        echo '<option value="' . $item->id . '">' . $item->descricao . '</option>';
+                                    }
+                                    ?>
 
                                 </select>
                             </div>
@@ -176,10 +176,10 @@ foreach ($listar as $item) {
                                     <option value=""> Selecione um nivel </option>
                                     <?php
 
-                           foreach ($acessos as $item) {
-                              echo '<option value="' . $item->id . '">' . $item->nivel . '</option>';
-                           }
-                           ?>
+                                    foreach ($acessos as $item) {
+                                        echo '<option value="' . $item->id . '">' . $item->nivel . '</option>';
+                                    }
+                                    ?>
 
                                 </select>
                             </div>

@@ -2,13 +2,24 @@ thead {
   display: table-header-group;
   vertical-align: middle;
   border-color: inherit;
-  background-color: rgba(138, 247, 210, 0.678);
+  background-color: #1bc5bd;
 }
 
 .dataTables_wrapper .dataTable tfoot th,
 .dataTables_wrapper .dataTable thead th {
   font-weight: 500;
-  color: #049f82;
+  color: #cefaf2;
+}
+
+.table.table-separate th:first-child,
+.table.table-separate td:first-child {
+  padding-left: 0 !important;
+  color: rgb(5, 5, 5) !important;
+  text-align: center;
+}
+
+.cor {
+  color: #cefaf2 !important;
 }
 
 .center {
